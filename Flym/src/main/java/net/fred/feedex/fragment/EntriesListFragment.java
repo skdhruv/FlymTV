@@ -196,7 +196,7 @@ public class EntriesListFragment extends SwipeRefreshListFragment {
         mListView = (ListView) rootView.findViewById(android.R.id.list);
         mListView.setOnTouchListener(new SwipeGestureListener(mListView.getContext()));
 
-        if (PrefUtils.getBoolean(PrefUtils.DISPLAY_TIP, true)) {
+        if (PrefUtils.getBoolean(PrefUtils.DISPLAY_TIP, false)) {
             final TextView header = new TextView(mListView.getContext());
             header.setMinimumHeight(UiUtils.dpToPixel(70));
             int footerPadding = UiUtils.dpToPixel(10);

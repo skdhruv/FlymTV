@@ -47,7 +47,7 @@ public class AboutActivity extends BaseActivity {
         PackageManager manager = this.getPackageManager();
         try {
             PackageInfo info = manager.getPackageInfo(this.getPackageName(), 0);
-            title = "Flym version " + info.versionName;
+            title = "FlymTV version 2.0 (Based on Flym version " + info.versionName + ")";
         } catch (NameNotFoundException unused) {
             title = "Flym";
         }

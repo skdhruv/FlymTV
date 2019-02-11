@@ -27,18 +27,18 @@
 
 
     <!-- GENERAL -->
-    <string name="app_name">Flym</string>
-    <string name="about_flym">About Flym</string>
+    <string name="app_name">Đọc Báo</string>
+    <string name="about_flym">About Flym News Reader for Android TV</string>
     <string name="welcome_title">Welcome to Flym. Would you like to add one feed?</string>
     <string name="never">never</string>
-    <string name="update">Update</string>
+    <string name="update">Cập nhật vào</string>
     <string name="colon">:\u00A0</string>
     <string name="menu_settings">Settings</string>
     <string name="menu_refresh">Refresh</string>
     <string name="menu_all_read">Mark all as read</string>
     <string name="flym_feeds">Flym feeds</string>
     <string name="error">Error</string>
-    <string name="network_error">The network is not set up</string>
+    <string name="network_error">Không có kết nối mạng</string>
     <string name="loading">Loading…</string>
     <string name="no_result">No result</string>
     <string name="drawer_open">Open navigation drawer</string>
@@ -46,7 +46,7 @@
 
     <!-- FEEDS -->
     <string name="feeds">Feeds</string>
-    <string name="menu_add_feed">Add feed</string>
+    <string name="menu_add_feed">Thêm nguồn tin tức khác</string>
     <string name="no_feeds">No feeds</string>
     <string name="no_filters">No rules</string>
     <string name="context_menu_delete">Delete</string>
@@ -104,29 +104,29 @@
     <string name="google_news_custom_topic">Enter custom topic</string>
 
     <!-- ENTRIES -->
-    <string name="unread_entries">Unread</string>
-    <string name="all_entries">All entries</string>
-    <string name="no_entries">No entries</string>
-    <string name="favorites">Starred</string>
+    <string name="unread_entries">Tất cả tin tức (chưa đọc)</string>
+    <string name="all_entries">Tất cả tin tức (đã và chưa đọc)</string>
+    <string name="no_entries">Chọn biểu tượng cạnh kính lúp để tải lại tin tức</string>
+    <string name="favorites">Tin tức đã lưu</string>
     <string name="context_menu_share_starred">Share starred entries</string>
     <string name="menu_star">Star</string>
     <string name="menu_unstar">Unstar</string>
     <string name="menu_share">Share</string>
     <string name="menu_full_screen">Full screen</string>
     <string name="menu_copy_clipboard">Copy link</string>
-    <string name="menu_mark_as_unread">Mark as unread</string>
+    <string name="menu_mark_as_unread">Đánh dấu là bản tin này chưa đọc</string>
     <string name="share_favorites_title">Flym: starred entries</string>
     <string name="copied_clipboard">Link copied</string>
-    <string name="get_full_text">Retrieve the full text</string>
-    <string name="original_text">Show original text</string>
+    <string name="get_full_text">Đọc tiếp ngay trong ứng dụng này</string>
+    <string name="original_text">Thu gọn</string>
     <string name="see_enclosure">See enclosure</string>
-    <string name="see_link">See in browser</string>
+    <string name="see_link">Xem đầy đủ trong trình duyệt web</string>
     <string name="cant_open_link">No application found for this link</string>
     <string name="open_enclosure">Open enclosure</string>
     <string name="file">File</string>
     <string name="download_and_save">Download and save</string>
     <string name="open_link">Open link</string>
-    <string name="tip_sentence">Tip: slide left to mark as read and slide right to mark as favorite</string>
+    <string name="tip_sentence"></string>
     <string name="undo">Undo</string>
     <string name="marked_as_read">Marked as read</string>
 

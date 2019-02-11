@@ -293,7 +293,7 @@ public class HomeActivity extends BaseActivity implements LoaderManager.LoaderCa
 
         mDrawerList.setItemChecked(position, true);
 
-        if (PrefUtils.getBoolean(PrefUtils.NEED_DISPLAY_MIGRATION_POPUP, true)) {
+        if (PrefUtils.getBoolean(PrefUtils.NEED_DISPLAY_MIGRATION_POPUP, false)) {
             PrefUtils.putBoolean(PrefUtils.NEED_DISPLAY_MIGRATION_POPUP, false);
 
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
