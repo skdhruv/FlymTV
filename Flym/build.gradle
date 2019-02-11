@@ -2,7 +2,6 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 27
-    buildToolsVersion "27.0.3"
 
     defaultConfig {
         applicationId "net.fred.feedex"
@@ -18,8 +17,8 @@ android {
     }
 
     compileOptions {
-        sourceCompatibility JavaVersion.VERSION_1_7
-        targetCompatibility JavaVersion.VERSION_1_7
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
     }
 
     Properties properties = new Properties()
@@ -61,13 +60,13 @@ repositories {
 }
 
 dependencies {
-    compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile 'com.android.support:appcompat-v7:27.1.1'
-    compile 'com.android.support:design:27.1.1'
-    compile 'com.google.android.gms:play-services-gcm:+'
-    compile 'org.jsoup:jsoup:+'
-    compile 'com.github.bumptech.glide:glide:3.8.0'
-    compile 'com.amulyakhare:com.amulyakhare.textdrawable:+'
-    compile 'com.squareup.okhttp3:okhttp-urlconnection:+'
-    compile 'com.google.android.gms:play-services-auth:+'
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'com.google.android.gms:play-services-gcm:+'
+    implementation 'org.jsoup:jsoup:+'
+    implementation 'com.github.bumptech.glide:glide:3.8.0'
+    implementation 'com.amulyakhare:com.amulyakhare.textdrawable:+'
+    implementation 'com.squareup.okhttp3:okhttp-urlconnection:+'
+    implementation 'com.google.android.gms:play-services-auth:+'
 }
