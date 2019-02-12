@@ -88,10 +88,10 @@ public class DrawerAdapter extends BaseAdapter {
             convertView = inflater.inflate(R.layout.item_drawer_list, parent, false);
 
             ViewHolder holder = new ViewHolder();
-            holder.iconView = (ImageView) convertView.findViewById(android.R.id.icon);
-            holder.titleTxt = (TextView) convertView.findViewById(android.R.id.text1);
-            holder.stateTxt = (TextView) convertView.findViewById(android.R.id.text2);
-            holder.unreadTxt = (TextView) convertView.findViewById(R.id.unread_count);
+            holder.iconView = convertView.findViewById(android.R.id.icon);
+            holder.titleTxt = convertView.findViewById(android.R.id.text1);
+            holder.stateTxt = convertView.findViewById(android.R.id.text2);
+            holder.unreadTxt = convertView.findViewById(R.id.unread_count);
             holder.separator = convertView.findViewById(R.id.separator);
             convertView.setTag(R.id.holder, holder);
         }

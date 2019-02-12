@@ -45,7 +45,7 @@ public abstract class CursorLoaderExpandableListAdapter extends BaseExpandableLi
     private final LoaderManager.LoaderCallbacks<Cursor> mChildrenLoaderCallback = new LoaderManager.LoaderCallbacks<Cursor>() {
         @Override
         public Loader<Cursor> onCreateLoader(int id, Bundle args) {
-            CursorLoader cursorLoader = new CursorLoader(mActivity, (Uri) args.getParcelable(URI_ARG), null, null, null, null) {
+            CursorLoader cursorLoader = new CursorLoader(mActivity, args.getParcelable(URI_ARG), null, null, null, null) {
 
                 @Override
                 public Cursor loadInBackground() {

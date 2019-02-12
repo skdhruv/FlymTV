@@ -42,7 +42,7 @@ public abstract class SwipeRefreshListFragment extends ListFragment implements S
         };
         inflateView(inflater, mRefreshLayout, savedInstanceState);
 
-        mListView = (ListView) mRefreshLayout.findViewById(android.R.id.list);
+        mListView = mRefreshLayout.findViewById(android.R.id.list);
         if (mListView != null) {
             // HACK to be able to know when we are on the top of the list (for the swipe refresh)
             mListView.addHeaderView(new View(mListView.getContext()));

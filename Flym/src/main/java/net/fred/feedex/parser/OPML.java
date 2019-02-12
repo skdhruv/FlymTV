@@ -222,7 +222,7 @@ public class OPML {
         private String mFeedId = null;
 
         @Override
-        public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+        public void startElement(String uri, String localName, String qName, Attributes attributes) {
             if (!mBodyTagEntered) {
                 if (TAG_BODY.equals(localName)) {
                     mBodyTagEntered = true;
@@ -285,7 +285,7 @@ public class OPML {
         }
 
         @Override
-        public void endElement(String uri, String localName, String qName) throws SAXException {
+        public void endElement(String uri, String localName, String qName) {
             if (mBodyTagEntered && TAG_BODY.equals(localName)) {
                 mBodyTagEntered = false;
             } else if (TAG_OUTLINE.equals(localName)) {
@@ -298,12 +298,12 @@ public class OPML {
         }
 
         @Override
-        public void warning(SAXParseException e) throws SAXException {
+        public void warning(SAXParseException e) {
             // ignore warnings
         }
 
         @Override
-        public void error(SAXParseException e) throws SAXException {
+        public void error(SAXParseException e) {
             // ignore small errors
         }
 

@@ -165,7 +165,7 @@ public class EntriesListFragment extends SwipeRefreshListFragment {
         refreshSwipeProgress();
         PrefUtils.registerOnPrefChangeListener(mPrefListener);
 
-        mFab = (FloatingActionButton) getActivity().findViewById(R.id.fab);
+        mFab = getActivity().findViewById(R.id.fab);
         mFab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -193,7 +193,7 @@ public class EntriesListFragment extends SwipeRefreshListFragment {
             setListAdapter(mEntriesCursorAdapter);
         }
 
-        mListView = (ListView) rootView.findViewById(android.R.id.list);
+        mListView = rootView.findViewById(android.R.id.list);
         mListView.setOnTouchListener(new SwipeGestureListener(mListView.getContext()));
 
         if (PrefUtils.getBoolean(PrefUtils.DISPLAY_TIP, false)) {
@@ -218,7 +218,7 @@ public class EntriesListFragment extends SwipeRefreshListFragment {
 
         UiUtils.addEmptyFooterView(mListView, 90);
 
-        mRefreshListBtn = (Button) rootView.findViewById(R.id.refreshListBtn);
+        mRefreshListBtn = rootView.findViewById(R.id.refreshListBtn);
         mRefreshListBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {

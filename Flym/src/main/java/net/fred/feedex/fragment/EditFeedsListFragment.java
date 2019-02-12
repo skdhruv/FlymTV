@@ -258,7 +258,7 @@ public class EditFeedsListFragment extends ListFragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View rootView = inflater.inflate(R.layout.fragment_edit_feed_list, container, false);
 
-        mListView = (DragNDropExpandableListView) rootView.findViewById(android.R.id.list);
+        mListView = rootView.findViewById(android.R.id.list);
         mListView.setFastScrollEnabled(true);
         mListView.setChoiceMode(ListView.CHOICE_MODE_SINGLE);
         mListView.setOnChildClickListener(new ExpandableListView.OnChildClickListener() {

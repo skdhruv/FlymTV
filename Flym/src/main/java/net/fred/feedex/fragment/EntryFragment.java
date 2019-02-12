@@ -104,7 +104,7 @@ public class EntryFragment extends SwipeRefreshFragment implements BaseActivity.
             }
         });
 
-        mEntryPager = (ViewPager) rootView.findViewById(R.id.pager);
+        mEntryPager = rootView.findViewById(R.id.pager);
         //mEntryPager.setPageTransformer(true, new DepthPageTransformer());
         mEntryPager.setAdapter(mEntryPagerAdapter);
 

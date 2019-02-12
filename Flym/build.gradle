@@ -2,28 +2,23 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 27
-
     defaultConfig {
-        applicationId "net.fred.feedex"
-        minSdkVersion 15
+        applicationId 'net.fred.feedex'
+        minSdkVersion 19
         targetSdkVersion 27
         versionCode 65
         versionName "1.9.8"
     }
-
     lintOptions {
         // if true, stop the gradle build if errors are found
         abortOnError true
     }
-
     compileOptions {
         sourceCompatibility JavaVersion.VERSION_1_8
         targetCompatibility JavaVersion.VERSION_1_8
     }
-
     Properties properties = new Properties()
     properties.load(project.rootProject.file('local.properties').newDataInputStream())
-
     signingConfigs {
         debug {
             if (properties.getProperty("KEYSTORE_PATH") != null) {
@@ -42,14 +37,16 @@ android {
             }
         }
     }
-
     buildTypes {
         release {
             minifyEnabled true
             shrinkResources true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
-			signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.release
+            zipAlignEnabled true
         }
+    }
+    productFlavors {
     }
 }
 

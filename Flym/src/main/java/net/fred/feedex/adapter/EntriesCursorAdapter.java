@@ -88,10 +88,10 @@ public class EntriesCursorAdapter extends ResourceCursorAdapter {
     public void bindView(View view, final Context context, Cursor cursor) {
         if (view.getTag(R.id.holder) == null) {
             ViewHolder holder = new ViewHolder();
-            holder.titleTextView = (TextView) view.findViewById(android.R.id.text1);
-            holder.dateTextView = (TextView) view.findViewById(android.R.id.text2);
-            holder.mainImgView = (ImageView) view.findViewById(R.id.main_icon);
-            holder.starImgView = (ImageView) view.findViewById(R.id.favorite_icon);
+            holder.titleTextView = view.findViewById(android.R.id.text1);
+            holder.dateTextView = view.findViewById(android.R.id.text2);
+            holder.mainImgView = view.findViewById(R.id.main_icon);
+            holder.starImgView = view.findViewById(R.id.favorite_icon);
             view.setTag(R.id.holder, holder);
         }
 

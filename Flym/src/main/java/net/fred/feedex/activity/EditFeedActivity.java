@@ -125,12 +125,12 @@ public class EditFeedActivity extends BaseActivity implements LoaderManager.Load
                     Cursor c = mFiltersCursorAdapter.getCursor();
                     if (c.moveToPosition(mFiltersCursorAdapter.getSelectedFilter())) {
                         final View dialogView = getLayoutInflater().inflate(R.layout.dialog_filter_edit, null);
-                        final EditText filterText = (EditText) dialogView.findViewById(R.id.filterText);
-                        final CheckBox regexCheckBox = (CheckBox) dialogView.findViewById(R.id.regexCheckBox);
-                        final RadioButton applyTitleRadio = (RadioButton) dialogView.findViewById(R.id.applyTitleRadio);
-                        final RadioButton applyContentRadio = (RadioButton) dialogView.findViewById(R.id.applyContentRadio);
-                        final RadioButton acceptRadio = (RadioButton) dialogView.findViewById(R.id.acceptRadio);
-                        final RadioButton rejectRadio = (RadioButton) dialogView.findViewById(R.id.rejectRadio);
+                        final EditText filterText = dialogView.findViewById(R.id.filterText);
+                        final CheckBox regexCheckBox = dialogView.findViewById(R.id.regexCheckBox);
+                        final RadioButton applyTitleRadio = dialogView.findViewById(R.id.applyTitleRadio);
+                        final RadioButton applyContentRadio = dialogView.findViewById(R.id.applyContentRadio);
+                        final RadioButton acceptRadio = dialogView.findViewById(R.id.acceptRadio);
+                        final RadioButton rejectRadio = dialogView.findViewById(R.id.rejectRadio);
 
                         filterText.setText(c.getString(c.getColumnIndex(FilterColumns.FILTER_TEXT)));
                         regexCheckBox.setChecked(c.getInt(c.getColumnIndex(FilterColumns.IS_REGEX)) == 1);
@@ -226,7 +226,7 @@ public class EditFeedActivity extends BaseActivity implements LoaderManager.Load
 
         setContentView(R.layout.activity_feed_edit);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
+        Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
 
@@ -234,11 +234,11 @@ public class EditFeedActivity extends BaseActivity implements LoaderManager.Load
 
         Intent intent = getIntent();
 
-        mTabHost = (TabHost) findViewById(R.id.tabHost);
-        mNameEditText = (EditText) findViewById(R.id.feed_title);
-        mUrlEditText = (EditText) findViewById(R.id.feed_url);
-        mRetrieveFulltextCb = (CheckBox) findViewById(R.id.retrieve_fulltext);
-        mFiltersListView = (ListView) findViewById(android.R.id.list);
+        mTabHost = findViewById(R.id.tabHost);
+        mNameEditText = findViewById(R.id.feed_title);
+        mUrlEditText = findViewById(R.id.feed_url);
+        mRetrieveFulltextCb = findViewById(R.id.retrieve_fulltext);
+        mFiltersListView = findViewById(android.R.id.list);
         View tabWidget = findViewById(android.R.id.tabs);
 
         mTabHost.setup();

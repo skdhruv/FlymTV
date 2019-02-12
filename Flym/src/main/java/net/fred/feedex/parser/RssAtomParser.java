@@ -215,7 +215,7 @@ public class RssAtomParser extends DefaultHandler {
     }
 
     @Override
-    public void startElement(String uri, String localName, String qName, Attributes attributes) throws SAXException {
+    public void startElement(String uri, String localName, String qName, Attributes attributes) {
         if (TAG_UPDATED.equals(localName)) {
             mUpdatedTagEntered = true;
             mDateStringBuilder = new StringBuilder();
@@ -325,7 +325,7 @@ public class RssAtomParser extends DefaultHandler {
     }
 
     @Override
-    public void characters(char[] ch, int start, int length) throws SAXException {
+    public void characters(char[] ch, int start, int length) {
         if (mTitleTagEntered) {
             mTitle.append(ch, start, length);
         } else if (mLinkTagEntered) {
@@ -611,17 +611,17 @@ public class RssAtomParser extends DefaultHandler {
     }
 
     @Override
-    public void warning(SAXParseException e) throws SAXException {
+    public void warning(SAXParseException e) {
         // ignore warnings
     }
 
     @Override
-    public void error(SAXParseException e) throws SAXException {
+    public void error(SAXParseException e) {
         // ignore errors
     }
 
     @Override
-    public void fatalError(SAXParseException e) throws SAXException {
+    public void fatalError(SAXParseException e) {
         // ignore errors
     }
 
