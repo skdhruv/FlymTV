@@ -8,10 +8,10 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_height="35dp"
+        android:background="@color/dark_header"
         android:minHeight="?attr/actionBarSize"
-        android:padding="3dp"
-        android:background="@color/dark_header">
+        android:padding="3dp">
 
         <ImageButton
             style="?android:attr/buttonBarButtonStyle"
@@ -35,7 +35,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:onClick="onClickSettings"
-            android:src="@drawable/action_settings"/>
+            android:src="@drawable/action_settings" />
     </LinearLayout>
 
     <ListView

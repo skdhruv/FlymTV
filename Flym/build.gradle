@@ -8,6 +8,7 @@ android {
         targetSdkVersion 27
         versionCode 65
         versionName "1.9.8"
+        resConfigs "en"
     }
     lintOptions {
         // if true, stop the gradle build if errors are found
@@ -44,6 +45,9 @@ android {
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
             signingConfig signingConfigs.release
             zipAlignEnabled true
+            debuggable false
+            jniDebuggable false
+            renderscriptDebuggable false
         }
     }
     productFlavors {

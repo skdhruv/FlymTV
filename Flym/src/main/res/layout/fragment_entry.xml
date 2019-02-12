@@ -6,7 +6,7 @@
 
     <android.support.v4.view.ViewPager
         android:id="@+id/pager"
-        android:layout_width="550dp"
+        android:layout_width="560dp"
         android:layout_height="match_parent"
         android:layout_centerHorizontal="true"
         android:layout_centerVertical="true" />
