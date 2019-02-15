@@ -75,7 +75,14 @@ public class EntriesListFragment extends SwipeRefreshListFragment {
 
     private static final int ENTRIES_LOADER_ID = 1;
     private static final int NEW_ENTRIES_NUMBER_LOADER_ID = 2;
-
+    private final OnSharedPreferenceChangeListener mPrefListener = new OnSharedPreferenceChangeListener() {
+        @Override
+        public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+            if (PrefUtils.IS_REFRESHING.equals(key)) {
+                refreshSwipeProgress();
+            }
+        }
+    };
     private Uri mCurrentUri, mOriginalUri;
     private boolean mShowFeedInfo = false;
     private EntriesCursorAdapter mEntriesCursorAdapter;
@@ -103,16 +110,9 @@ public class EntriesListFragment extends SwipeRefreshListFragment {
             mEntriesCursorAdapter.swapCursor(Constants.EMPTY_CURSOR);
         }
     };
-    private final OnSharedPreferenceChangeListener mPrefListener = new OnSharedPreferenceChangeListener() {
-        @Override
-        public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
-            if (PrefUtils.IS_REFRESHING.equals(key)) {
-                refreshSwipeProgress();
-            }
-        }
-    };
     private int mNewEntriesNumber, mOldUnreadEntriesNumber = -1;
     private boolean mAutoRefreshDisplayDate = false;
+    private Button mRefreshListBtn;
     private final LoaderManager.LoaderCallbacks<Cursor> mEntriesNumberLoader = new LoaderManager.LoaderCallbacks<Cursor>() {
         @Override
         public Loader<Cursor> onCreateLoader(int id, Bundle args) {
@@ -141,7 +141,6 @@ public class EntriesListFragment extends SwipeRefreshListFragment {
         public void onLoaderReset(Loader<Cursor> loader) {
         }
     };
-    private Button mRefreshListBtn;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {

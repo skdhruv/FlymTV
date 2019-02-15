@@ -682,7 +682,7 @@ public class FetcherService extends IntentService {
                 }
             } finally {
 
-				/* check and optionally find favicon */
+                /* check and optionally find favicon */
                 try {
                     if (handler != null && cursor.getBlob(iconPosition) == null) {
                         String feedLink = handler.getFeedLink();

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <PreferenceScreen
         android:layout_width="wrap_content"
@@ -11,7 +11,7 @@
         <intent
             android:action="android.intent.action.VIEW"
             android:targetClass="net.fred.feedex.activity.AboutActivity"
-            android:targetPackage="net.fred.feedex"/>
+            android:targetPackage="net.fred.feedex" />
     </PreferenceScreen>
 
     <PreferenceCategory
@@ -25,7 +25,7 @@
             android:defaultValue="true"
             android:key="refresh.enabled"
             android:summary="@string/settings_refresh_enabled_description"
-            android:title="@string/settings_refresh_enabled"/>
+            android:title="@string/settings_refresh_enabled" />
 
         <net.fred.feedex.view.AutoSummaryListPreference
             android:layout_width="wrap_content"
@@ -36,7 +36,7 @@
             android:entryValues="@array/settings_interval_values"
             android:inputType="number"
             android:key="refresh.interval"
-            android:title="@string/settings_refresh_interval"/>
+            android:title="@string/settings_refresh_interval" />
 
         <CheckBoxPreference
             android:layout_width="wrap_content"
@@ -44,7 +44,7 @@
             android:defaultValue="false"
             android:key="refreshonopen.enabled"
             android:summary="@string/settings_refresh_on_open_description"
-            android:title="@string/settings_refresh_on_open"/>
+            android:title="@string/settings_refresh_on_open" />
 
         <CheckBoxPreference
             android:layout_width="wrap_content"
@@ -52,7 +52,7 @@
             android:defaultValue="false"
             android:key="refreshwifionly.enabled"
             android:summary="@string/settings_refresh_wifi_only_description"
-            android:title="@string/settings_refresh_wifi_only"/>
+            android:title="@string/settings_refresh_wifi_only" />
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -67,7 +67,7 @@
             android:disableDependentsState="true"
             android:key="lighttheme"
             android:summary="@string/settings_light_theme_description"
-            android:title="@string/settings_light_theme"/>
+            android:title="@string/settings_light_theme" />
 
         <net.fred.feedex.view.AutoSummaryListPreference
             android:layout_width="wrap_content"
@@ -77,7 +77,7 @@
             android:entryValues="@array/settings_keep_time_values"
             android:inputType="number"
             android:key="keeptime"
-            android:title="@string/settings_keep_time"/>
+            android:title="@string/settings_keep_time" />
 
         <net.fred.feedex.view.AutoSummaryListPreference
             android:layout_width="wrap_content"
@@ -87,7 +87,7 @@
             android:entryValues="@array/settings_font_size_values"
             android:inputType="number"
             android:key="fontsize"
-            android:title="@string/settings_font_size"/>
+            android:title="@string/settings_font_size" />
 
         <CheckBoxPreference
             android:layout_width="wrap_content"
@@ -95,7 +95,7 @@
             android:defaultValue="true"
             android:key="display_images"
             android:summary="@string/settings_display_images_description"
-            android:title="@string/settings_display_images"/>
+            android:title="@string/settings_display_images" />
 
         <net.fred.feedex.view.AutoSummaryListPreference
             android:layout_width="wrap_content"
@@ -106,7 +106,7 @@
             android:entryValues="@array/settings_preload_image_modes_values"
             android:inputType="text"
             android:key="preload_image_mode"
-            android:title="@string/settings_preload_image_mode"/>
+            android:title="@string/settings_preload_image_mode" />
 
         <CheckBoxPreference
             android:layout_width="wrap_content"
@@ -114,7 +114,7 @@
             android:defaultValue="false"
             android:key="display_oldest_first"
             android:summary="@string/settings_display_oldest_first_description"
-            android:title="@string/settings_display_oldest_first"/>
+            android:title="@string/settings_display_oldest_first" />
 
         <CheckBoxPreference
             android:layout_width="wrap_content"
@@ -122,7 +122,7 @@
             android:defaultValue="false"
             android:key="display_entries_fullscreen"
             android:summary="@string/settings_display_entries_fullscreen_description"
-            android:title="@string/settings_display_entries_fullscreen"/>
+            android:title="@string/settings_display_entries_fullscreen" />
     </PreferenceCategory>
 
     <PreferenceCategory
@@ -136,7 +136,7 @@
             android:defaultValue="true"
             android:key="notifications.enabled"
             android:summary="@string/settings_notifications_enabled_description"
-            android:title="@string/settings_notifications_enabled"/>
+            android:title="@string/settings_notifications_enabled" />
 
         <RingtonePreference
             android:layout_width="wrap_content"
@@ -144,7 +144,7 @@
             android:dependency="notifications.enabled"
             android:key="notifications.ringtone"
             android:ringtoneType="notification"
-            android:title="@string/settings_notifications_ringtone"/>
+            android:title="@string/settings_notifications_ringtone" />
 
         <CheckBoxPreference
             android:layout_width="wrap_content"
@@ -152,7 +152,7 @@
             android:dependency="notifications.enabled"
             android:key="notifications.vibrate"
             android:summary="@string/settings_notifications_vibrate_description"
-            android:title="@string/settings_notifications_vibrate"/>
+            android:title="@string/settings_notifications_vibrate" />
 
         <CheckBoxPreference
             android:layout_width="wrap_content"
@@ -161,7 +161,7 @@
             android:dependency="notifications.enabled"
             android:key="notifications.light"
             android:summary="@string/settings_notifications_light_description"
-            android:title="@string/settings_notifications_light"/>
+            android:title="@string/settings_notifications_light" />
 
     </PreferenceCategory>
 

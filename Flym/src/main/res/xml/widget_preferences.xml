@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
-                  android:layout_width="wrap_content"
-                  android:layout_height="wrap_content">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
 
     <net.fred.feedex.widget.ColorPickerDialogPreference
         android:layout_width="wrap_content"
@@ -11,7 +11,7 @@
         android:negativeButtonText="@android:string/cancel"
         android:positiveButtonText="@android:string/ok"
         android:summary="@string/settings_widget_background_description"
-        android:title="@string/settings_widget_background"/>
+        android:title="@string/settings_widget_background" />
 
     <ListPreference
         android:name="@string/settings_font_size"
@@ -22,12 +22,12 @@
         android:entryValues="@array/settings_font_size_values"
         android:inputType="number"
         android:key="widget.fontsize"
-        android:title="@string/settings_font_size"/>
+        android:title="@string/settings_font_size" />
 
     <PreferenceCategory
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:key="widget.visiblefeeds"
-        android:title="@string/settings_visible_feeds"/>
+        android:title="@string/settings_visible_feeds" />
 
 </PreferenceScreen>

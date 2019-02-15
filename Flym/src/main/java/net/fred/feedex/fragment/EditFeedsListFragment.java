@@ -93,7 +93,7 @@ public class EditFeedsListFragment extends ListFragment {
     private static final int REQUEST_PICK_OPML_FILE = 1;
     private static final int PERMISSIONS_REQUEST_IMPORT_FROM_OPML = 1;
     private static final int PERMISSIONS_REQUEST_EXPORT_TO_OPML = 2;
-
+    private DragNDropExpandableListView mListView;
     private final ActionMode.Callback mFeedActionModeCallback = new ActionMode.Callback() {
 
         // Called when the action mode is created; startActionMode() was called
@@ -246,7 +246,6 @@ public class EditFeedsListFragment extends ListFragment {
             }
         }
     };
-    private DragNDropExpandableListView mListView;
 
     @Override
     public void onCreate(Bundle savedInstanceState) {
@@ -423,7 +422,7 @@ public class EditFeedsListFragment extends ListFragment {
                 new AlertDialog.Builder(getActivity()) //
                         .setTitle(R.string.add_group_title) //
                         .setView(input) //
-                                // .setMessage(R.string.add_group_sentence) //
+                        // .setMessage(R.string.add_group_sentence) //
                         .setPositiveButton(android.R.string.ok, new DialogInterface.OnClickListener() {
                             @Override
                             public void onClick(DialogInterface dialog, int which) {

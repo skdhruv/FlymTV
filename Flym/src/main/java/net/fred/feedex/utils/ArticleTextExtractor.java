@@ -35,7 +35,7 @@ public class ArticleTextExtractor {
 
     // Very most likely positive candidates, used by Joomla CMS
     private static final Pattern ITSJOOMLA = Pattern.compile("articleBody");
-    
+
     // Most likely negative candidates
     private static final Pattern NEGATIVE = Pattern.compile("nav($|igation)|user|com(ment|bx)|(^com-)|contact|"
             + "foot|masthead|(me(dia|ta))|outbrain|promo|related|scroll|(sho(utbox|pping))|"
@@ -90,7 +90,7 @@ public class ArticleTextExtractor {
         if (bestMatchElement != null) {
             String ret = bestMatchElement.toString();
             if (ogImage != null && !ret.contains(ogImage)) {
-                ret = "<img src=\""+ogImage+"\"><br>\n"+ret;
+                ret = "<img src=\"" + ogImage + "\"><br>\n" + ret;
             }
             return ret;
         }

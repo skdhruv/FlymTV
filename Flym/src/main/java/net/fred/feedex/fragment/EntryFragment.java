@@ -479,6 +479,8 @@ public class EntryFragment extends SwipeRefreshFragment implements BaseActivity.
         return (layout == null ? null : (FrameLayout) layout.findViewById(R.id.videoLayout));
     }
 
+    /* return (layout == null ? null : (FrameLayout) layout.findViewById(R.id.videoLayout)); */
+
     @Override
     public Loader<Cursor> onCreateLoader(int id, Bundle args) {
         CursorLoader cursorLoader = new CursorLoader(getActivity(), EntryColumns.CONTENT_URI(mEntriesIds[id]), null, null, null, null);

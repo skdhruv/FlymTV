@@ -123,10 +123,10 @@ public class RssAtomParser extends DefaultHandler {
             {"ICT", "+0700"}};
 
     private static final ThreadLocal<DateFormat[]> PUBDATE_DATE_FORMATS
-            = new ThreadLocal<DateFormat[]>(){
+            = new ThreadLocal<DateFormat[]>() {
         @Override
         protected DateFormat[] initialValue() {
-            return new DateFormat[] {  // For RSS date time strings
+            return new DateFormat[]{  // For RSS date time strings
                     new SimpleDateFormat("d' 'MMM' 'yy' 'HH:mm:ss' 'Z", Locale.US),
                     new SimpleDateFormat("d' 'MMM' 'yy' 'HH:mm:ss' 'z", Locale.US),
                     new SimpleDateFormat("d' 'MMM' 'yy' 'HH:mm:ss", Locale.US)
@@ -135,10 +135,10 @@ public class RssAtomParser extends DefaultHandler {
     };
 
     private static final ThreadLocal<DateFormat[]> UPDATE_DATE_FORMATS
-            = new ThreadLocal<DateFormat[]>(){
+            = new ThreadLocal<DateFormat[]>() {
         @Override
         protected DateFormat[] initialValue() {
-            return new DateFormat[] {  // For ATOM date time strings
+            return new DateFormat[]{  // For ATOM date time strings
                     new SimpleDateFormat("yyyy-MM-dd' 'HH:mm:ssZ", Locale.US),
                     new SimpleDateFormat("yyyy-MM-dd' 'HH:mm:ss.SSSz", Locale.US),
                     new SimpleDateFormat("yyyy-MM-dd' 'HH:mm:ss", Locale.US),
@@ -247,8 +247,8 @@ public class RssAtomParser extends DefaultHandler {
             if (TAG_ENCLOSURE.equals(attributes.getValue("", ATTRIBUTE_REL))) {
                 startEnclosure(attributes, attributes.getValue("", ATTRIBUTE_HREF));
                 //} else if(TAG_ALTERNATE.equals(attributes.getValue("", ATTRIBUTE_REL))) {
-            } else if(TAG_RELATED.equals(attributes.getValue("", ATTRIBUTE_REL))) {
-            } else if(TAG_VIA.equals(attributes.getValue("", ATTRIBUTE_REL))) {
+            } else if (TAG_RELATED.equals(attributes.getValue("", ATTRIBUTE_REL))) {
+            } else if (TAG_VIA.equals(attributes.getValue("", ATTRIBUTE_REL))) {
             } else {
                 // Get the link only if we don't have one or if its the good one (html)
                 if (mEntryLink == null || HTML_TEXT.equals(attributes.getValue("", ATTRIBUTE_TYPE))) {

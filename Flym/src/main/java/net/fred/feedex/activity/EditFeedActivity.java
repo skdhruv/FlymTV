@@ -98,6 +98,11 @@ public class EditFeedActivity extends BaseActivity implements LoaderManager.Load
     static final String FEED_SEARCH_DESC = "description";
     private static final String STATE_CURRENT_TAB = "STATE_CURRENT_TAB";
     private static final String[] FEED_PROJECTION = new String[]{FeedColumns.NAME, FeedColumns.URL, FeedColumns.RETRIEVE_FULLTEXT, FeedColumns.IS_GROUP};
+    private TabHost mTabHost;
+    private EditText mNameEditText, mUrlEditText;
+    private CheckBox mRetrieveFulltextCb;
+    private ListView mFiltersListView;
+    private FiltersCursorAdapter mFiltersCursorAdapter;
     private final ActionMode.Callback mFilterActionModeCallback = new ActionMode.Callback() {
 
         // Called when the action mode is created; startActionMode() was called
@@ -213,11 +218,6 @@ public class EditFeedActivity extends BaseActivity implements LoaderManager.Load
             mFiltersListView.invalidateViews();
         }
     };
-    private TabHost mTabHost;
-    private EditText mNameEditText, mUrlEditText;
-    private CheckBox mRetrieveFulltextCb;
-    private ListView mFiltersListView;
-    private FiltersCursorAdapter mFiltersCursorAdapter;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

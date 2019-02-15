@@ -42,6 +42,16 @@ import net.fred.feedex.Constants;
 public abstract class CursorLoaderExpandableListAdapter extends BaseExpandableListAdapter {
     private static final String URI_ARG = "uri";
     private final Activity mActivity;
+    private final LoaderManager mLoaderMgr;
+    private final Uri mGroupUri;
+    private final int mCollapsedGroupLayout;
+    private final int mExpandedGroupLayout;
+    private final int mChildLayout;
+    private final LayoutInflater mInflater;
+    /**
+     * The map of a group position to the group's children cursor
+     */
+    private final SparseArray<Pair<Cursor, Boolean>> mChildrenCursors = new SparseArray<>();
     private final LoaderManager.LoaderCallbacks<Cursor> mChildrenLoaderCallback = new LoaderManager.LoaderCallbacks<Cursor>() {
         @Override
         public Loader<Cursor> onCreateLoader(int id, Bundle args) {
@@ -71,16 +81,6 @@ public abstract class CursorLoaderExpandableListAdapter extends BaseExpandableLi
             notifyDataSetInvalidated();
         }
     };
-    private final LoaderManager mLoaderMgr;
-    private final Uri mGroupUri;
-    private final int mCollapsedGroupLayout;
-    private final int mExpandedGroupLayout;
-    private final int mChildLayout;
-    private final LayoutInflater mInflater;
-    /**
-     * The map of a group position to the group's children cursor
-     */
-    private final SparseArray<Pair<Cursor, Boolean>> mChildrenCursors = new SparseArray<>();
     private Cursor mGroupCursor;
     private final LoaderManager.LoaderCallbacks<Cursor> mGroupLoaderCallback = new LoaderManager.LoaderCallbacks<Cursor>() {
         @Override

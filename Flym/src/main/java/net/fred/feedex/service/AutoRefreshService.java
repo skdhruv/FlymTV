@@ -60,13 +60,6 @@ public class AutoRefreshService extends GcmTaskService {
     public static final String SIXTY_MINUTES = "3600000";
     public static final String TASK_TAG_PERIODIC = "TASK_TAG_PERIODIC";
 
-    @Override
-    public int onRunTask(TaskParams taskParams) {
-        getBaseContext().startService(new Intent(getBaseContext(), FetcherService.class).setAction(FetcherService.ACTION_REFRESH_FEEDS).putExtra(Constants.FROM_AUTO_REFRESH, true));
-
-        return GcmNetworkManager.RESULT_SUCCESS;
-    }
-
     public static void initAutoRefresh(Context context) {
         GcmNetworkManager gcmNetworkManager = GcmNetworkManager.getInstance(context);
 
@@ -90,5 +83,12 @@ public class AutoRefreshService extends GcmTaskService {
         } else {
             gcmNetworkManager.cancelTask(TASK_TAG_PERIODIC, AutoRefreshService.class);
         }
+    }
+
+    @Override
+    public int onRunTask(TaskParams taskParams) {
+        getBaseContext().startService(new Intent(getBaseContext(), FetcherService.class).setAction(FetcherService.ACTION_REFRESH_FEEDS).putExtra(Constants.FROM_AUTO_REFRESH, true));
+
+        return GcmNetworkManager.RESULT_SUCCESS;
     }
 }

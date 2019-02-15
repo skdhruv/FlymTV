@@ -1,8 +1,8 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
 
-    <include layout="@layout/view_toolbar"/>
+    <include layout="@layout/view_toolbar" />
 
     <TabHost
         android:id="@+id/tabHost"
@@ -18,7 +18,7 @@
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="fill_parent"
-                android:layout_height="wrap_content"/>
+                android:layout_height="wrap_content" />
 
             <FrameLayout
                 android:id="@android:id/tabcontent"
@@ -38,7 +38,7 @@
                         android:layout_marginTop="20dp"
                         android:text="@string/feed_url"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <EditText
                         android:id="@+id/feed_url"
@@ -46,11 +46,11 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/url_textview"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
                         android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
                         android:hint="@string/website_or_feed"
                         android:inputType="textUri"
-                        android:singleLine="true"/>
+                        android:singleLine="true" />
 
                     <TextView
                         android:id="@+id/name_textview"
@@ -61,7 +61,7 @@
                         android:layout_marginTop="20dp"
                         android:text="@string/feed_title"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <EditText
                         android:id="@+id/feed_title"
@@ -69,19 +69,19 @@
                         android:layout_height="wrap_content"
                         android:layout_below="@id/name_textview"
                         android:layout_marginLeft="10dp"
-                        android:layout_marginRight="10dp"
                         android:layout_marginTop="5dp"
+                        android:layout_marginRight="10dp"
                         android:hint="@string/optional"
-                        android:singleLine="true"/>
+                        android:singleLine="true" />
 
                     <CheckBox
                         android:id="@+id/retrieve_fulltext"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_alignParentRight="true"
                         android:layout_below="@+id/feed_title"
+                        android:layout_alignParentRight="true"
                         android:layout_marginRight="10dp"
-                        android:text="@string/get_full_text"/>
+                        android:text="@string/get_full_text" />
                 </RelativeLayout>
 
                 <RelativeLayout
@@ -97,7 +97,7 @@
                         android:layout_marginTop="20dp"
                         android:text="@string/feed_filters"
                         android:textAppearance="?android:attr/textAppearanceMedium"
-                        android:textStyle="bold"/>
+                        android:textStyle="bold" />
 
                     <FrameLayout
                         android:layout_width="match_parent"
@@ -111,13 +111,13 @@
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
                             android:gravity="center"
-                            android:text="@string/no_filters"/>
+                            android:text="@string/no_filters" />
 
                         <ListView
                             android:id="@android:id/list"
                             android:layout_width="match_parent"
                             android:layout_height="match_parent"
-                            android:choiceMode="singleChoice"/>
+                            android:choiceMode="singleChoice" />
                     </FrameLayout>
                 </RelativeLayout>
             </FrameLayout>

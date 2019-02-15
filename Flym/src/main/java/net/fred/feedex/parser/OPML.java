@@ -231,7 +231,7 @@ public class OPML {
             } else if (TAG_OUTLINE.equals(localName)) {
                 String url = attributes.getValue("", ATTRIBUTE_XMLURL);
                 String title = attributes.getValue("", ATTRIBUTE_TITLE);
-                if(title == null) {
+                if (title == null) {
                     title = attributes.getValue("", ATTRIBUTE_TEXT);
                 }
 

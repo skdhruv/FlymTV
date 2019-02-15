@@ -73,21 +73,6 @@ public class SwipeRefreshLayout extends ViewGroup {
     private OnRefreshListener mListener;
     private MotionEvent mDownEvent;
     private int mFrom;
-    private final Animation mAnimateToStartPosition = new Animation() {
-        @Override
-        public void applyTransformation(float interpolatedTime, Transformation t) {
-            int targetTop = 0;
-            if (mFrom != mOriginalOffsetTop) {
-                targetTop = (mFrom + (int) ((mOriginalOffsetTop - mFrom) * interpolatedTime));
-            }
-            int offset = targetTop - mTarget.getTop();
-            final int currentTop = mTarget.getTop();
-            if (offset + currentTop < 0) {
-                offset = 0 - currentTop;
-            }
-            setTargetOffsetTopAndBottom(offset);
-        }
-    };
     private boolean mRefreshing = false;
     private int mTouchSlop;
     private float mDistanceToTriggerSync = -1;
@@ -110,6 +95,21 @@ public class SwipeRefreshLayout extends ViewGroup {
     };
     private int mProgressBarHeight;
     private int mCurrentTargetOffsetTop;
+    private final Animation mAnimateToStartPosition = new Animation() {
+        @Override
+        public void applyTransformation(float interpolatedTime, Transformation t) {
+            int targetTop = 0;
+            if (mFrom != mOriginalOffsetTop) {
+                targetTop = (mFrom + (int) ((mOriginalOffsetTop - mFrom) * interpolatedTime));
+            }
+            int offset = targetTop - mTarget.getTop();
+            final int currentTop = mTarget.getTop();
+            if (offset + currentTop < 0) {
+                offset = 0 - currentTop;
+            }
+            setTargetOffsetTopAndBottom(offset);
+        }
+    };
     private final AnimationListener mReturnToStartPositionListener = new BaseAnimationListener() {
         @Override
         public void onAnimationEnd(Animation animation) {
